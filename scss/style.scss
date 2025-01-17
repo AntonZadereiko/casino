@@ -625,7 +625,10 @@ header{
         z-index: 1;
         background: rgba(0, 0, 0, 0.6);
         border-radius: 0px 30px 30px 30px;
+        @include max-screen(990px){      
+            width: 0;
     }
+}
     .container{
         position: relative;
     z-index: 2;
@@ -659,6 +662,10 @@ header{
                 line-height: 100%;
                 letter-spacing: 0%;
                 margin-bottom: 48px;
+                @include max-screen(655px){      
+                    margin-bottom: 35px;
+                    font-size: 40px;
+                }
             }
             .contact_name{
                 
