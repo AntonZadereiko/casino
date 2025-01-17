@@ -605,3 +605,259 @@ header{
         }
     }
 }
+.contact{
+    background-image: url(../images/contact.png);
+    background-size: cover;
+    padding: 85px 10px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 735px;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        pointer-events: none;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 0px 30px 30px 30px;
+    }
+    .container{
+        position: relative;
+    z-index: 2;
+        h3{
+            color: rgb(255, 255, 255);
+            font-family: $main;
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin-bottom: 48px;
+        }
+        form{
+            
+            padding: 70px 30px 0 0;
+            width: 700px;
+            @include max-screen(655px){      
+                width: 500px;
+            }
+            @include max-screen(540px){      
+                width: 300px;
+            }
+            @include max-screen(340px){      
+                width: 280px;
+            }
+            h3{
+                color: rgb(255, 255, 255);
+                font-family: $main;
+                font-size: 48px;
+                font-weight: 800;
+                line-height: 100%;
+                letter-spacing: 0%;
+                margin-bottom: 48px;
+            }
+            .contact_name{
+                
+                width: 595px;
+                @include max-screen(655px){      
+                    width: 500px;
+                }
+                @include max-screen(540px){      
+                    width: 300px;
+                }
+                @include max-screen(340px){      
+                    width: 280px;
+                }
+                
+            input{
+                margin-bottom: 24px;
+                
+                background: rgba(255, 255, 255, 0.19);
+                border-radius: 0px 20px 20px 20px;
+                border:none;
+                width: 595px;
+                height: 72px;
+                padding-left: 20px;
+                color: white;
+                font-family: $second;
+                font-size: 20px;
+                font-weight: 400;
+                @include max-screen(655px){      
+                    width: 500px;
+                }
+                @include max-screen(540px){      
+                    width: 300px;
+                }
+                @include max-screen(340px){      
+                    width: 280px;
+                }
+                &::placeholder{
+                    color: white;
+                    font-family: $second;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: left;
+              }
+            }
+        }
+        .contact_text{
+            width: 595px;
+            @include max-screen(655px){      
+                width: 500px;
+            }
+            @include max-screen(540px){      
+                width: 300px;
+            }
+            @include max-screen(340px){      
+                width: 280px;
+            }
+            textarea{
+                width: 595px;
+                border-radius: 0px 20px 20px 20px;
+                background: rgba(255, 255, 255, 0.19);
+                padding: 15px 0 0 15px;
+                height: 173px;
+                border:none;
+                @include max-screen(655px){      
+                    width: 500px;
+                }
+                @include max-screen(540px){      
+                    width: 300px;
+                }
+                @include max-screen(340px){      
+                    width: 280px;
+                }
+                &::placeholder{
+                    color: white;
+                    font-family: $second;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: left;
+              }
+            }
+        }
+        .contact_btn{
+            max-width: 288px;
+                
+                border-radius: 0px 20px 20px 20px;
+                background: rgb(255, 234, 46);
+                padding: 20px 25px;
+                margin-top: 32px;
+            button{
+                color: rgb(30, 30, 30);
+                font-family: $main;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                background: none;
+                border: none;
+                
+            }
+        }
+        }
+    }
+}
+footer{
+    padding: 50px 10px;
+    background: rgb(27, 27, 27);
+    .container{
+        .f_info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 65px;
+            @include max-screen(660px){      
+                display: block;
+                margin-bottom: 40px;
+            }
+            .f_logo{
+                max-width: 189px;
+                @include max-screen(660px){      
+                    margin-bottom: 15px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+            ul{
+                display: flex;
+                @include max-screen(460px){      
+                    display: block;
+                }
+                li{
+                    list-style: none;
+                    margin-right: 40px;
+                    @include max-screen(460px){      
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                    &:last-of-type{
+                        margin-right: 0;
+                        @include max-screen(460px){      
+                            margin-right: 0;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-family: $main;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        @include max-screen(460px){      
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .f_text{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            @include max-screen(970px){      
+                display: block;
+            }
+            h4{
+                max-width: 749px;
+                color: rgb(203, 203, 203);
+                font-family: $second;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 160%;
+                letter-spacing: 0%;
+                text-align: left;
+                @include max-screen(970px){      
+                    margin-bottom: 15px;
+                }
+            }
+            p{
+                img{
+                    position: relative;
+                    top: 10px;
+                    left: -8px;
+                }
+                color: rgb(255, 255, 255);
+                font-family: $second;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: left;
+            }
+        }
+    }
+}
