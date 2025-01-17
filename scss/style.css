@@ -540,6 +540,11 @@ header .container nav ul li a {
   background: rgb(150, 46, 255);
   padding: 20px 25px;
 }
+.rest .container .rest_box .rest_link:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color: #8b4513;
+}
 .rest .container .rest_box .rest_link a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -679,6 +684,11 @@ header .container nav ul li a {
   background: rgb(150, 46, 255);
   padding: 20px 25px;
   margin-top: 50px;
+}
+.casino .container .casino_link:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color: #8b4513;
 }
 .casino .container .casino_link a {
   text-decoration: none;
@@ -896,6 +906,11 @@ header .container nav ul li a {
   padding: 20px 25px;
   margin-top: 32px;
 }
+.contact .container form .contact_btn:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color: #8b4513;
+}
 .contact .container form .contact_btn button {
   color: rgb(30, 30, 30);
   font-family: "Inter", serif;
@@ -946,6 +961,10 @@ footer .container .f_info ul {
 footer .container .f_info ul li {
   list-style: none;
   margin-right: 40px;
+}
+footer .container .f_info ul li:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
 }
 @media screen and (max-width: 460px) {
   footer .container .f_info ul li {

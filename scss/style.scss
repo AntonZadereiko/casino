@@ -457,6 +457,11 @@ header{
                 border-radius: 0px 20px 20px 20px;
                 background: rgb(150, 46, 255);
                 padding: 20px 25px;
+                &:hover{
+                    transform: scale(1.1);
+                    transition-duration: 0.5s;
+                    background-color: #8b4513;
+                }
                 a{
                     text-decoration: none;
                     color: rgb(255, 255, 255);
@@ -592,6 +597,11 @@ header{
                 background: rgb(150, 46, 255);
                 padding: 20px 25px;
                 margin-top: 50px;
+                &:hover{
+                    transform: scale(1.1);
+                    transition-duration: 0.5s;
+                    background-color: #8b4513;
+                }
                 a{
                     text-decoration: none;
                     color: rgb(255, 255, 255);
@@ -758,6 +768,11 @@ header{
                 background: rgb(255, 234, 46);
                 padding: 20px 25px;
                 margin-top: 32px;
+                &:hover{
+                    transform: scale(1.1);
+                    transition-duration: 0.5s;
+                    background-color: #8b4513;
+                }
             button{
                 color: rgb(30, 30, 30);
                 font-family: $main;
@@ -804,6 +819,10 @@ footer{
                 li{
                     list-style: none;
                     margin-right: 40px;
+                    &:hover{
+                        transform: scale(1.2);
+                        transition-duration: 0.5s;
+                    }
                     @include max-screen(460px){      
                         margin-right: 0;
                         margin-bottom: 20px;
