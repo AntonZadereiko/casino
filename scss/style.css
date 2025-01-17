@@ -120,12 +120,12 @@ header .container nav ul li a {
 }
 @media screen and (max-width: 767px) {
   .main_banner {
-    padding-top: 200px;
+    padding-top: 250px;
   }
 }
 @media screen and (max-width: 434px) {
   .main_banner {
-    padding-top: 300px;
+    padding-top: 320px;
   }
 }
 .main_banner .container h1 {
