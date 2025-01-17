@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1360px;
+  margin: auto;
+}
+
+header {
+  padding: 27px 0;
+  position: absolute;
+  width: 100%;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+@media screen and (max-width: 767px) {
+  header {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header .container .logo {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  header .container .logo {
+    margin-bottom: 15px;
+  }
+}
+header .container .logo p {
+  color: rgb(255, 234, 46);
+  font-family: "Roboto", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+@media screen and (max-width: 815px) {
+  header .container .logo p {
+    font-size: 35px;
+  }
+}
+header .container nav ul {
+  display: flex;
+}
+@media screen and (max-width: 434px) {
+  header .container nav ul {
+    display: block;
+  }
+}
+header .container nav ul li {
+  list-style: none;
+  margin-right: 40px;
+}
+@media screen and (max-width: 540px) {
+  header .container nav ul li {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 434px) {
+  header .container nav ul li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+header .container nav ul li:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+header .container nav ul li:last-of-type {
+  margin-right: 0;
+}
+header .container nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Inter", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+@media screen and (max-width: 815px) {
+  header .container nav ul li a {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 434px) {
+  header .container nav ul li a {
+    font-size: 25px;
+  }
+}
+
+.main_banner {
+  background-image: url(../images/main_b.png);
+  background-size: cover;
+  height: 100vh;
+  padding-top: 280px;
+}
+@media screen and (max-width: 767px) {
+  .main_banner {
+    padding-top: 200px;
+  }
+}
+.main_banner .container h1 {
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", serif;
+  max-width: 650px;
+  font-size: 74px;
+  font-weight: 800;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .main_banner .container h1 {
+    margin-bottom: 15px;
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 434px) {
+  .main_banner .container h1 {
+    font-size: 45px;
+  }
+}
+.main_banner .container p {
+  max-width: 615px;
+  margin-bottom: 40px;
+  color: rgb(255, 255, 255);
+  font-family: "Inter", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .main_banner .container p {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 434px) {
+  .main_banner .container p {
+    font-size: 13px;
+  }
+}
+.main_banner .container .main_link {
+  padding: 26px 30px;
+  border-radius: 0px 20px 20px 20px;
+  max-width: 288px;
+  background: rgb(255, 234, 46);
+}
+@media screen and (max-width: 767px) {
+  .main_banner .container .main_link {
+    max-width: 250px;
+    padding: 20px 25px;
+  }
+}
+@media screen and (max-width: 434px) {
+  .main_banner .container .main_link {
+    padding: 15px 20px;
+  }
+}
+.main_banner .container .main_link:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color: #8b4513;
+}
+.main_banner .container .main_link a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+  font-family: "Inter", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */
