@@ -24,66 +24,83 @@ header{
     padding: 27px 0;
     position: absolute;
     width: 100%;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(34px);
+    
     @include max-screen(767px){      
         backdrop-filter: blur(0);
     }
     .container{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .logo {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        @include max-screen(767px){      
-            flex-direction: column;
-            align-items: center;
+        transition: opacity 0.3s, transform 0.3s;
+        &.hidden {
+            opacity: 0;
+            transform: translateX(-100%); 
+            display: none; // Зсуваємо лого вліво, коли воно приховане
         }
-        .logo{
-            display: flex;
-            align-items: center;
-            @include max-screen(767px){      
-                margin-bottom: 15px;
-            }
-            
-            p{
-                color: rgb(255, 234, 46);
+        p {
+            color: rgb(255, 234, 46);
                 font-family: $second;
                 font-size: 40px;
                 font-weight: 400;
                 line-height: 120%;
                 letter-spacing: 0%;
                 text-align: left;
-                @include max-screen(815px){      
-                    font-size: 35px;
-                }
-            }
         }
-        nav{
-            ul{
-                display: flex;
-                @include max-screen(434px){      
-                    display: block;
-                }
-                li{
-                    list-style: none;
-                    margin-right: 40px;
-                    @include max-screen(540px){      
-                        margin-right: 20px;
-                    }
-                    @include max-screen(434px){      
-                        margin-right: 0;
-                        margin-bottom: 20px;
-                    }
-                    &:hover{
-                        transform: scale(1.2);
-                        transition-duration: 0.5s;
-                    }
-                    &:last-of-type{
-                        margin-right: 0;
-                        @include max-screen(434px){      
-                            margin-bottom: 0;
-                        }
-                    }
-                    a{
-                        text-decoration: none;
+    }
+    
+    nav {
+        ul {
+            display: flex;
+            
+            @include max-screen(767px){      
+                justify-content: space-between;
+                margin-left: 10px;
+                padding-top: 15px;
+            }
+            @include max-screen(600px){      
+               flex-direction: column;
+               align-items: flex-start;
+               margin-left: 220px;
+            }
+            @include max-screen(580px){      
+                margin-left: 180px;
+            }
+            @include max-screen(500px){      
+                margin-left: 140px;
+            }
+            @include max-screen(430px){      
+                margin-left: 40px;
+            }
+    
+        li {
+            list-style: none;
+            margin-right: 40px;
+            @include max-screen(910px){      
+                margin-right: 10px;
+            }
+            @include max-screen(767px){      
+                margin-right: 50px;
+            }
+            @include max-screen(600px){      
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            &:last-of-type{
+                margin-right: 0;
+            }
+            &:hover{
+                transform: scale(1.2);
+                transition-duration: 0.5s;
+            }
+    
+            a {
+                text-decoration: none;
                         color: rgb(255, 255, 255);
                         font-family: $main;
                         font-size: 20px;
@@ -91,16 +108,57 @@ header{
                         line-height: 100%;
                         letter-spacing: 0%;
                         text-align: left;
-                        @include max-screen(815px){      
-                            font-size: 18px;
-                        }
-                        @include max-screen(434px){      
+                        @include max-screen(600px){      
                             font-size: 25px;
                         }
-                    }
+                &:hover {
+                    color: #ff8c00;
                 }
             }
         }
+    }
+    }
+    
+    // Стилі для бургер-меню
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    
+        .bar {
+            width: 30px;
+            height: 4px;
+            background-color: yellow;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+    
+        .burger-menu {
+            display: flex;
+        }
+    
+        .nav-active {
+            display: block;
+        }
+    
+        .burger-menu.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+    
+        .burger-menu.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .burger-menu.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    }
     }
 }
 .main_banner{

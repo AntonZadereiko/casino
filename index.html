@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
+            <div class="logo" id="logo">
                 <img src="images/logo.svg" alt="logo">
                 <p>Star Casino</p>
             </div>
@@ -21,6 +21,11 @@
                     <li><a href="#">Hotele kasyno</a></li>
                 </ul>
             </nav>
+            <div class="burger-menu" id="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
     <main>
@@ -191,5 +196,16 @@
             </div>
         </div>
     </footer>
+    <script>
+       const burgerMenu = document.getElementById('burger-menu');
+const nav = document.querySelector('nav');
+const hide = document.getElementById('logo')
+
+burgerMenu.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    burgerMenu.classList.toggle('active');
+    hide.classList.toggle('hidden');
+});
+    </script>
 </body>
 </html>
